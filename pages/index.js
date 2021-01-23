@@ -3,16 +3,21 @@ import fs from "fs";
 
 const Home = ({ slugs }) => (
   <div>
+    <div>
+      <h1 className="text-2xl text-center mt-6 font-semibold my-6">Index TEST</h1>
+    </div>
+    <div>
     slugs:
     {slugs.map(slug => {
       return (
         <div key={slug}>
           <Link href={"/blog/" + slug}>
-            <a>{"/blog/" + slug}</a>
+            <a>{slug}</a>
           </Link>
         </div>
       );
     })}
+    </div>
   </div>
 );
 
